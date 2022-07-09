@@ -1,0 +1,90 @@
+import Layout from "../components/template/Layout";
+import Link from "next/link";
+
+import { GoChecklist } from "react-icons/go";
+import { VscPreview } from "react-icons/vsc";
+import { FaMoneyCheckAlt } from "react-icons/fa";
+
+import BarraProgresso from "../components/template/BarraProgresso";
+import Page from "../components/template/Page";
+import Button from "../components/template/Button";
+
+import {
+  Container,
+  Card,
+  CardContainer,
+  ButtonGroup,
+  DivBarraHorizontal,
+  DivBarraVertical,
+  DivBarraContainer,
+  DivIcons,
+  DivTitle,
+  Teste,
+} from "../components/styles/pages/reembolsoStyles";
+import { GetServerSideProps } from "next";
+import { parseCookies } from "nookies";
+
+export default function Confirmacao() {
+  return (
+    <Layout>
+      <BarraProgresso tela={5} />
+
+        <Page title="Status do Retorno">
+          <Teste>
+            <DivIcons>
+              <VscPreview size={30} />
+              <GoChecklist size={30} />
+              <FaMoneyCheckAlt size={30} />
+            </DivIcons>
+            <CardContainer>
+              <DivBarraHorizontal />
+              <DivBarraVertical />
+              <DivBarraHorizontal />
+              <DivBarraVertical />
+              <DivBarraHorizontal />
+            </CardContainer>
+            <DivBarraContainer>
+              <div>
+                <p>10/03/2022 16:25</p>
+                <p>Em Análise</p>
+              </div>
+              <div>
+                <p>13/03/2022 10:00</p>
+                <p>Produto Confirmado</p>
+              </div>
+              <div>
+                <p>15/03/2022 17:20</p>
+                <p>Reembolsado</p>
+              </div>
+            </DivBarraContainer>
+          </Teste>
+          <ButtonGroup>
+            <Link href="/confirmacao" passHref>
+              <Button>Voltar</Button>
+            </Link>
+
+            <Link href="" passHref>
+              <Button>Confirmar</Button>
+            </Link>
+          </ButtonGroup>
+        </Page>
+    </Layout>
+  );
+}
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { ['@retornei-app.token']: token } = parseCookies(ctx);
+
+  if (!token) {
+    return {
+      redirect: {
+        destination: '/sign-in',
+        permanent: false,
+      }
+    }
+  }
+
+  return {
+    props: {}
+  }
+}

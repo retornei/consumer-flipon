@@ -1,0 +1,55 @@
+{"uuidPedido":"5fe81be3-0cf6-436e-ac7c-dde45a81a398",
+  "data":[2022,6,24,1,5,19,346725000],
+
+
+
+  "consumidor":{
+    "uuid":"a890ea5f-7510-417b-985e-c8a95547018a",
+    "nomeRazaoSocial":"MARCIO ROGERIO SIETO",
+    "nomeFantasia":"MARCIO ROGERIO SIETO",
+    "cpfCnpj":"42636304000190",
+    "inscricaoEstadual":"",
+    "inscricaoMunicipal":"",
+    "email":"mmmsieto@gmail.com",
+    "site":"","telefone":"(55) 16997-5352",
+    "celular":"(55) 16997-0462","contato":"fsdfs",
+    "telefoneContato":null,"active":true},
+
+
+  "enderecoConsumidor":{
+    "cep":"15910-000",
+    "logradouro":"RUA JOAO BATISTA DE ARRUDA",
+    "numero":"280",
+    "bairro":"PARQUE RESIDENCIAL ESPLANADA",
+    "municipio":"Monte Alto",
+    "uf":"SP",
+    "complemento":""},
+
+  "enderecoCliente":null,
+
+  "mensagemCliente":null,
+  "mensagemConsumidor":"",
+  "codigoCorreios":null,
+  "aprovado":null,
+  "status":"ANDAMENTO",
+  "dataMudancaStatus":[2022,6,24,1,5,19,278805000],
+  "dataAprovado":null,
+  "dataRejeicao":null,
+  "dataConcluido":null,
+
+  "itensViews":[
+    {
+  "imagemOriginal"
+  "imagemConsumidor"
+  "descricao"
+  "valor"
+  "quantidade"
+  "comentario"
+  "acao"
+  "motivo"
+    },
+
+
+
+
+    {"imagemOriginal":"https://retornei-imagens-fotos.s3.sa-east-1.amazonaws.com/images/2bd503a9-6a91-4639-8012-86c8237bd373_5.jpg","imagemConsumidor":null,"descricao":"ACABAMENTO DE PASSAGEM DOS CABOS (DOIS FUROS)","valor":8,"quantidade":1,"comentario":"","acao":"Devolução","motivo":"Garantia"},{"imagemOriginal":"https://retornei-imagens-fotos.s3.sa-east-1.amazonaws.com/images/ab8b288a-e367-4d13-bdc3-b4c331069ea3_9.jpg","imagemConsumidor":null,"descricao":"ALAVANCA DE DESCANSO","valor":50,"quantidade":1,"comentario":"AAAAAAAAAAAAAA","acao":"Troca","motivo":"Outros"}]}
