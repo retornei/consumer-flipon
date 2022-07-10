@@ -1,14 +1,12 @@
 import Index from "../components/template/LayoutRetornei";
 import Link from "next/link";
 
-import { getUserInfo, updatePassword } from "../services/api/methods";
+import { getUserInfo } from "../services/api/methods";
 
 import Button from "../components/template/Button";
 
 import { Container, Card, Div } from "../components/styles/pages/minhaContaStyles";
 import { useEffect, useState } from "react";
-import Input from "../components/template/Input";
-import toast from "react-hot-toast";
 
 export type UserType = {
   active: boolean;
@@ -28,42 +26,6 @@ export type UserType = {
 
 export default function MinhaConta() {
   const [user, setUser] = useState<UserType>();
-  const [senhaAntiga, setSenhaAntiga] = useState<string>("");
-  const [novaSenha, setNovaSenha] = useState<string>("");
-  const [confirmarSenha, setconfirmarSenha] = useState<string>("");
-
-  const handleUpdateSenha = async () => {
-    const payload = {
-      novaSenha,
-      senhaAntiga,
-    }
-
-    if (!senhaAntiga) {
-      toast.error("Forneça a senha atual");
-      return false;
-    }
-
-    if (!novaSenha || !confirmarSenha) {
-      toast.error("Verifique campos obrigatórios");
-      return false;
-    }
-
-    if (novaSenha !== confirmarSenha) {
-      toast.error("Nova senha não estão diferentes");
-      return false;
-    }
-
-    try {
-      await updatePassword(payload);
-
-      toast.success("Senha atualizada com sucesso");
-      setSenhaAntiga("");
-      setNovaSenha("");
-      setconfirmarSenha("");
-    } catch (err) {
-      toast.error(err.message);
-    }
-  }
 
   useEffect(() => {
     (async () => {
@@ -115,27 +77,6 @@ export default function MinhaConta() {
           <p>
             <span>Telefone do Contato:</span> {user?.telefoneContato ? user.telefoneContato : '--'}
           </p>
-
-          <div>
-            <h3 style={{textAlign: 'center'}}>Alterar senha</h3>
-
-            <div style={{display: 'flex', flexDirection: 'column'}}>
-              <label style={{marginLeft: 15, marginBottom: 3, fontSize: 18, fontWeight: 900, color: 'grey'}}>Senha atual <sup>*</sup></label>
-              <Input type="password" value={senhaAntiga} onChange={ev => setSenhaAntiga(ev.currentTarget.value)} />
-            </div>
-
-            <div style={{display: 'flex', flexDirection: 'column'}}>
-              <label style={{marginLeft: 15, marginBottom: 3, fontSize: 18, fontWeight: 900, color: 'grey'}}>Nova senha <sup>*</sup></label>
-              <Input type="password" value={novaSenha} onChange={ev => setNovaSenha(ev.currentTarget.value)} />
-            </div>
-
-            <div style={{display: 'flex', flexDirection: 'column'}}>
-              <label style={{marginLeft: 15, marginBottom: 3, fontSize: 18, fontWeight: 900, color: 'grey'}}>Confirmar senha <sup>*</sup></label>
-              <Input type="password" value={confirmarSenha} onChange={ev => setconfirmarSenha(ev.currentTarget.value)} />
-            </div>
-
-            <Button onClick={() => handleUpdateSenha()}>Alterar</Button>
-          </div>
 
           <Div>
             <Link href="/dados-pessoais" passHref>

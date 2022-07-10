@@ -9,9 +9,14 @@ export const Container = styled.div`
   box-shadow: 0 0 0.4em lightgray;
   border-radius: 20px;
   
+  strong {
+    color: black;
+    font-weight: 900;
+  }
+  
   span {
     color: dimgray;
-    font-weight: 900;
+    font-weight: 700;
   }
 `;
 

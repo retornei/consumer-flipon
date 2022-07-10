@@ -17,6 +17,7 @@ const RightNav = ({ open }) => {
     return (
         <Ul open={open}>
             <li><Link href="/sign-in">Acessar Conta</Link></li>
+            {token && <li><Link href="/senha" passHref>Trocar Senha</Link></li>}
             {token && <li><Link href="/pedido" passHref>Novo Pedido</Link></li>}
             {token && <li><Link href="/minha-conta">Minha Conta</Link></li>}
             {token && <li><Link href="/meus-enderecos">Meus Endereços</Link></li>}

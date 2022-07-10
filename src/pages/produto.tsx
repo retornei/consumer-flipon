@@ -147,6 +147,8 @@ export default function Produto() {
                           <Option value="">...</Option>
                           <Option value="Troca">Troca</Option>
                           <Option value="Devolução">Devolução</Option>
+                          <Option value="Venda">Venda</Option>
+                          <Option value="Outros">Outros</Option>
                         </Select>
                       </FormGroup>
 
@@ -170,6 +172,7 @@ export default function Produto() {
                           <Option value="">...</Option>
                           <Option value="Assistência Técnica">Assistência Técnica</Option>
                           <Option value="Garantia">Garantia</Option>
+                          <Option value="Venda">Venda</Option>
                           <Option value="Outros">Outros</Option>
                         </Select>
                       </FormGroup>

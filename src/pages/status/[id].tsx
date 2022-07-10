@@ -113,12 +113,16 @@ export default function Solicitacao() {
                             {
                                 order.codigoCorreios &&
                                 <Container>
-                                    <span>Código de Postagem: {order.codigoCorreios}</span>
+                                    <>
+                                        <strong>Código de Postagem</strong>
+                                        <span>{order.codigoCorreios}</span>
+                                    </>
+
 
                                     {order.mensagemCliente &&
                                         <>
                                             <br />
-                                            <span>Mensagem da Flipon</span>
+                                            <strong>Mensagem da Flipon</strong>
                                             <span>{order?.mensagemCliente}</span>
                                         </>
                                     }
