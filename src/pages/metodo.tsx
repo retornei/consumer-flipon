@@ -7,6 +7,7 @@ import Page from "../components/template/Page";
 
 import {
   ButtonGroup,
+  Div,
 } from "../components/styles/pages/metodoStyles";
 
 import { GetServerSideProps } from "next";
@@ -19,8 +20,9 @@ export default function Metodo() {
 
       <Page title="Método">
 
-
-    <h1>Postagem a Agência dos Correios mais Próxima</h1>
+        <Div>
+          <span>Postagem na Agência dos Correios mais próxima</span>
+        </Div>
 
         <ButtonGroup>
           <Link href="/produto" passHref>
