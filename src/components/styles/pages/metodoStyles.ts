@@ -7,8 +7,3 @@ export const ButtonGroup = styled.div`
   width: 100%;
 `;
 
-export const MapContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-`;

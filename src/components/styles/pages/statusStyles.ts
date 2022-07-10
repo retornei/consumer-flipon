@@ -8,6 +8,11 @@ export const Container = styled.div`
   margin-bottom: 30px;
   box-shadow: 0 0 0.4em lightgray;
   border-radius: 20px;
+  
+  span {
+    color: dimgray;
+    font-weight: 900;
+  }
 `;
 
 export const Card = styled.div`
@@ -21,87 +26,6 @@ export const Card = styled.div`
   min-height: 300px;
   border-radius: 25px;
   padding-bottom: 30px;
-`;
-
-export const CardContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 25px;
-  margin: 30px 10px 30px 0;
-`;
-
-export const DivIcons= styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 27px 0 50px 0;
-`;
-
-export const DivTitle= styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-`;
-
-
-export const DivBarraHorizontal = styled.div`
-  height: 15px;
-  width: 15px;
-  background: black;
-  border-radius: 4px;
-`;
-
-export const DivBarraVertical = styled.div`
-  height: 80px;
-  width: 5px;
-  background: black;
-`;
-
-export const DivBarraContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  
-  div {
-    margin: 20px 0 35px 0;
-  }
-  
-  p {
-    margin: 3px 0 0 0;
-  }
-`;
-
-export const Teste = styled.div`
-  display: flex;
-  margin-left: 50px;
-`;
-
-export const H1 = styled.h1`
-  color: gray;
-  margin: 20px 0 15px 10px;
-  font-size: 22px;
-  
-  @media(max-width: 600px) {
-    font-size: 20px;
-  }
-
-  @media(max-width: 400px) {
-    font-size: 16px;
-  }
-`;
-
-export const H2 = styled.h2`
-  color: gray;
-  margin-top: 0;
-  font-size: 18px;
-  
-  @media(max-width: 600px) {
-    font-size: 16px;
-  }
-
-  @media(max-width: 400px) {
-    font-size: 14px;
-  }
 `;
 
 export const Span = styled.span`

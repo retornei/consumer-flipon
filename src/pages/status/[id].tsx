@@ -113,20 +113,24 @@ export default function Solicitacao() {
                             {
                                 order.codigoCorreios &&
                                 <Container>
-                                    <h2>Código de Postagem: {order.codigoCorreios}</h2>
+                                    <span>Código de Postagem: {order.codigoCorreios}</span>
+
+                                    {order.mensagemCliente &&
+                                        <>
+                                            <br />
+                                            <span>Mensagem da Flipon</span>
+                                            <span>{order?.mensagemCliente}</span>
+                                        </>
+                                    }
+
                                 </Container>
                             }
                             {
                                 order.status == "REJEITADO" &&
                                 <Container>
-                                    <h3>Não foi possível aprovação do Pedido, </h3>
-                                    <h3>segue abaixo as informações necessária para Aprovação</h3>
-                                </Container>
-                            }
-                            {
-                                order.mensagemCliente &&
-                                <Container>
-                                    <h3>{order.mensagemCliente}</h3>
+                                    <span>Não foi possível aprovação do Pedido, </span>
+                                    <span>segue abaixo as informações necessária para Aprovação</span>
+                                    <span>{order?.mensagemCliente}</span>
                                 </Container>
                             }
 
@@ -166,7 +170,7 @@ export default function Solicitacao() {
                                 <Image src={item.imagemOriginal}></Image>
                             </CardImage>
                             <CardImage>
-                                <Image src={ item.imagemConsumidor == "" ? item.imagemConsumidor : "/img/semImg.png"
+                                <Image src={ item.imagemConsumidor ? item.imagemConsumidor : "/img/semImg.png"
 
                                 }></Image>
                             </CardImage>
