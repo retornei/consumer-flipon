@@ -22,6 +22,11 @@ export const ButtonGroup = styled.div`
   margin: 5px;
 `;
 
+export const Div = styled.div`
+  overflow-wrap: break-word;
+  max-width: 95%;
+`;
+
 export const CardProduct = styled.div`
   display: flex;
   align-items: center;

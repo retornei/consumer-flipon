@@ -18,6 +18,7 @@ import {
     Image,
     DivRetorno,
     DivContainer,
+    Div,
 } from "../../components/styles/pages/solicitacaoStyles";
 
 import {GetServerSideProps} from "next";
@@ -115,7 +116,10 @@ export default function Solicitacao() {
                                 <Container>
                                     <>
                                         <strong>Código de Postagem</strong>
-                                        <span>{order.codigoCorreios}</span>
+                                        <Div>
+                                            <span>{order.codigoCorreios}</span>
+                                        </Div>
+
                                     </>
 
 
