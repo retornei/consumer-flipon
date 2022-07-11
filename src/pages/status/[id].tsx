@@ -127,7 +127,9 @@ export default function Solicitacao() {
                                         <>
                                             <br />
                                             <strong>Mensagem da Flipon</strong>
-                                            <span>{order?.mensagemCliente}</span>
+                                            <Div>
+                                             <span>{order?.mensagemCliente}</span>
+                                            </Div>
                                         </>
                                     }
 
@@ -138,7 +140,9 @@ export default function Solicitacao() {
                                 <Container>
                                     <span>Não foi possível aprovação do Pedido, </span>
                                     <span>segue abaixo as informações necessária para Aprovação</span>
-                                    <span>{order?.mensagemCliente}</span>
+                                    <Div>
+                                        <span>{order?.mensagemCliente}</span>
+                                    </Div>
                                 </Container>
                             }
 
